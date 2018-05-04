@@ -1,0 +1,63 @@
+2 channel, 32-step, polyrhythmic, microtonal MIDI note sequencer written in Pure Data (vanilla).
+
+Copyright Haven C. King - havencking@gmail.com
+Released to the wild May 2018.
+
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+***************
+Files included:
+***************
+
+README - this file.
+
+2 channel MIDI sequencer.pd - the main file to open and use the sequencer.
+
+MIDI_out.pd - the abstraction that handles the microtonal MIDI note output.
+
+master_clock.pd - the abstraction that generates the polyrhythmic clock.
+
+32_step_note_sequencer.pd - the 32-step sequencer.
+
+test sequence preset.txt - a preset step sequence.
+
+12 EDO scale.txt - to generate a 12 EDO scale.
+
+12 tone pythagorean scale.txt - generate a 12 note pythagorean scale.
+
+10 EDO scale.txt - generate a 10 EDO scale.
+
+17 EDO scale.txt - generate a 17 EDO scale.
+
+You can create your own scale files.  They are just a list numbered 0-127 with the multipliers that are applied to a base (or bass) frequency (Hz) to generate a scale.
+
+You can create a new preset file just as an empty file, and then save to it from within the patch to fill it with the preset data.
+
+***********
+How to use:
+***********
+
+1.  Open 2 channel MIDI sequencer in Pure Data.
+
+2.  Click "load" on the presets pane in the top sequencer, and choose "test sequence preset.txt".  You should see an ascending pattern.
+
+3.  Click "load_scale", and choose "12 EDO scale.txt".
+
+4.  Make sure your MIDI output device is selected in Pure Data.  (Media >> MIDI Settings...)
+
+5.  Hit play.  Move sliders to achieve maximum happiness.
+
+6.  Follow same steps for the second sequencer, but be sure to select another MIDI channel.
+
+Note 1:  You'll want the MIDI "pitchbend_range" set the same on the sequencer as for the synthesizer that is being controlled.  (Pitchbend is used to generate the microtonal pitches, so the pitches would be off if they are set differently.)

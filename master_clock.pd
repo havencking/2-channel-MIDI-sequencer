@@ -1,0 +1,48 @@
+#N canvas 752 239 732 541 10;
+#X obj 385 183 metro;
+#X floatatom 81 16 3 1 300 1 bpm #0-to_bpm #0-from_bpm, f 3;
+#X obj 22 75 tgl 30 0 \$0-from_play \$0-to_play play 40 15 0 20 -204786
+-258113 -1 0 1;
+#X obj 22 39 bng 30 250 50 0 empty \$0-master_bang master 35 15 0 20
+-99865 -258113 -1;
+#X msg 279 82 120;
+#X msg 218 112 0;
+#X obj 255 82 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 255 105 s \$0-to_bpm;
+#X obj 508 108 r \$0-from_bpm;
+#X obj 508 130 / 240000;
+#X obj 508 153 pow -1;
+#X obj 218 25 loadbang;
+#X obj 387 22 inlet tempo;
+#X obj 387 44 s \$0-to_bpm;
+#X obj 385 216 outlet bang;
+#X obj 508 216 outlet ms_per_meas;
+#X obj 218 49 t b b b;
+#X obj 385 107 r \$0-from_play;
+#X text 12 121 bang;
+#X text 13 13 tempo;
+#X text 84 109 ms per;
+#X text 84 121 measure;
+#X obj 218 135 s \$0-to_play;
+#X obj 449 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 256 221 s \$0-master_bang;
+#X connect 0 0 14 0;
+#X connect 0 0 24 0;
+#X connect 4 0 7 0;
+#X connect 5 0 22 0;
+#X connect 6 0 7 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 1;
+#X connect 10 0 15 0;
+#X connect 11 0 16 0;
+#X connect 12 0 13 0;
+#X connect 16 0 5 0;
+#X connect 16 1 6 0;
+#X connect 16 2 4 0;
+#X connect 17 0 0 0;
+#X connect 17 0 23 0;
+#X connect 23 0 9 0;
+#X coords 0 -1 1 1 130 130 2 10 10;
