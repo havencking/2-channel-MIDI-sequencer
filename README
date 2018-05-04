@@ -60,4 +60,4 @@ How to use:
 
 6.  Follow same steps for the second sequencer, but be sure to select another MIDI channel.
 
-Note 1:  You'll want the MIDI "pitchbend_range" set the same on the sequencer as for the synthesizer that is being controlled.  (Pitchbend is used to generate the microtonal pitches, so the pitches would be off if they are set differently.)
+Note:  You'll want the MIDI "pitchbend_range" set the same on the sequencer as for the synthesizer that is being controlled.  (Pitchbend is used to generate the microtonal pitches, so the pitches would be off if they are set differently.)
